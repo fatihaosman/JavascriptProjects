@@ -5,7 +5,7 @@ This repository contains several small JavaScript projects I’m building to pra
 ## Projects:
 
 - **Weather App**: A simple app to get current weather using OpenWeatherMap API.  
-  https://fatihaosman.github.io/JavascriptProjects/weather app/
+  [https://fatihaosman.github.io/JavascriptProjects/weather app/](https://fatihaosman.github.io/JavascriptProjects/weather%20app/)
 
 - **Quiz App**: A simple quiz game app.  
   [Live Demo](https://fatihaosman.github.io/JavascriptProjects/quizzapp/)
