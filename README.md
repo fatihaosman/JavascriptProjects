@@ -4,7 +4,7 @@ This repository contains several small JavaScript projects I'm building to pract
 
 ## Projects
 
-- [Weather App](./weatherapp) – A simple app to get current weather using OpenWeatherMap API.
+- [Weather app](./weatherapp) – A simple app to get current weather using OpenWeatherMap API.
 
 
 i will be adding more as i continue.
