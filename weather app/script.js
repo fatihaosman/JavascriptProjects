@@ -13,6 +13,8 @@ const weatherIcon = document.querySelector(".weather_icon")
 async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
+    // “Please give me weather data for this city, and here’s my API key to prove I’m allowed.”, await is forwaiting for the data wich may take  while to retreive from the internet
+//we have to check the response code is it error or a valid one
     if(response.status==404){
         document.querySelector(".error").style.display = "block";
         document.querySelector(".weather").style.display = "none";
@@ -26,6 +28,7 @@ async function checkWeather(city){
     document.querySelector(".temp").innerHTML = Math.round( data.main.temp) + "°C" ;
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + "km/hr" ;
+     document.querySelector(".pressure").innerHTML = data.main.pressure + "mb" ;
     
     /*weather conditions */
     if(data.weather[0].main=="Clouds"){
@@ -43,9 +46,10 @@ async function checkWeather(city){
     else if(data.weather[0].main == "Mist"){
         weatherIcon.src = "weather images/images/mist.png";
     }
+
     document.querySelector(".weather").style.display ="block";
     document.querySelector(".error").style.display ="none";
-    }
+    }   //else ends here
     
     
 }
