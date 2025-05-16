@@ -1,38 +1,106 @@
+const quizDiv=document.getElementsByClassName('quiz')[0];
+const introDiv=document.getElementsByClassName('intro')[0];
+const startBtn=document.getElementsByClassName('introBtn')[0];
+
+/*
+ getElementsByClassName() returns a collection, not a single element, so you need to access the first one using [0].
+ */
+startBtn.addEventListener('click', function(){
+    introDiv.style.display="none";
+    quizDiv.style.display="block";
+});
+
+
+
 const questions = [
     {
-        question:"when is fatiha's birthday",
+        question:"What will typeof NaN return?",
         answers: [
-            {text:"12th october", correct: false},
-            {text:"14th october", correct: false},
-            {text:"15th october", correct: true},
-            {text:"17th october",  correct: false}
+            {text:"NAN", correct: false},
+            {text:"undefined", correct: false},
+            {text:"number", correct: true},
+            {text:"object",  correct: false}
         ]
     },
     {
-        question:"what is her favourite yoghurt",
+        question:"Which method converts a JSON string into a JavaScript object?",
         answers: [
-            {text:"fresh yoghurt", correct: false},
-            {text:"Delamere yoghurt", correct: true},
-            {text:"ilara yoghurt", correct: false},
-            {text:"daima yoghurt", correct: false}
+            {text:"JSON.parse()", correct: true},
+            {text:"JSON.stringify()", correct: false},
+            {text:"JSON.object()", correct: false},
+            {text:"parse.JSON()", correct: false}
         ]
     },
     {
-        question:"which is her favourite yoghurt flavor",
+        question:"How do you write a function in JavaScript?",
         answers: [
-            {text:" wild berrires", correct: false},
-            {text:"strawberries", correct: false},
-            {text:"lemon biscuit", correct: true},
-            {text:"vanilla pods", correct: false}
+            {text:" function: myFunc() {}", correct: false},
+            {text:"def myFunc() {}", correct: false},
+            {text:"function myFunc() {}", correct: true},
+            {text:"function = myFunc() {}", correct: false}
         ]
     },
     {
-        question:"what is her favourite color",
+        question:"Which of these is a correct if statement?",
         answers: [
-            {text:"purple", correct: false},
-            {text:"black", correct: false},
-            {text:"blue", correct: true},
-            {text:"white", correct: false}
+            {text:"if x = 10 then", correct: false},
+            {text:"if x === 10", correct: false},
+            {text:"if x == 10", correct: true},
+            {text:"if (x => 10)", correct: false}
+        ]
+    },
+    {
+        question:" what is the output: console.log(2 + '2');",
+        answers: [
+            {text:"22", correct: true},
+            {text:"NaN", correct: false},
+            {text:"4", correct: false},
+            {text:"Error", correct: false}
+        ]
+    },
+     {
+        question:" Which method removes the last item in an array?",
+        answers: [
+            {text:"shift()", correct: false},
+            {text:"NaN", correct: false},
+            {text:"splice()", correct: false},
+            {text:"pop()", correct: true}
+        ]
+    },
+    {
+        question:" What happens if you declare a variable with let inside a block {} and try to access it outside the block?",
+        answers: [
+            {text:"It causes a ReferenceError", correct: true},
+            {text:" It turns into null", correct: false},
+            {text:"It works fine because let is global", correct: false},
+            {text:"It returns undefined", correct: false}
+        ]
+    },
+     {
+        question:" Why is it generally a bad idea to use var instead of let or const in modern JavaScript?",
+        answers: [
+            {text:"var is function-scoped, which can lead to bugs", correct: true},
+            {text:" var is block-scoped and hard to use", correct: false},
+            {text:"var is too slow", correct: false},
+            {text:"var doesn't exist in modern browsers", correct: false}
+        ]
+    },
+    {
+        question:" what is the main difference between == and === in javascript?",
+        answers: [
+            {text:"== is faster", correct: false},
+            {text:"=== converts types automatically", correct: false},
+            {text:" They are exactly the same", correct: false},
+            {text:"== checks value, === checks value and type", correct: true}
+        ]
+    },
+    {
+        question:"What is the purpose of addEventListener in JavaScript??",
+        answers: [
+            {text:"To style HTML with JavaScript", correct: false},
+            {text:"To declare variables", correct: false},
+            {text:"To handle events like clicks and key presses", correct: true},
+            {text:" To create new elements on the page", correct: false}
         ]
     }
 ];
@@ -112,12 +180,41 @@ function selectAnswer(e){ /*fifth  ---to show if you got correct answer*/
     nextButton.style.display="block";
 }
 /*10th-----to show your score */
+// function showScore(){
+//    resetState() ;
+//    const result = document.createElement("p");
+//    result.innerHTML="Thanks for playing! Here's how you did.";
+//    questionElement.appendChild(result);
+//    questionElement.innerHTML=`You scored ${score} out of ${questions.length}!`;
+//     nextButton.innerHTML = "play again";
+//     nextButton.style.display="none";
+// }
+
 function showScore(){
-   resetState() ;
-   questionElement.innerHTML=`You scored ${score} out of ${questions.length}!`;
-nextButton.innerHTML = "play again";
-nextButton.style.display="block";
+   resetState();
+
+   questionElement.innerHTML = ""; // Clear existing content
+
+   const resultTitle = document.createElement("p");
+   resultTitle.innerHTML = "Thanks for playing! Here's how you did:";
+   resultTitle.style.fontWeight = "bold";
+   resultTitle.style.fontSize = "20px";
+   resultTitle.style.marginBottom = "10px";
+   resultTitle.style.textAlign = "center";
+   resultTitle.style.color = " #222";
+
+   const scoreText = document.createElement("p");
+   scoreText.innerHTML = `You scored ${score} out of ${questions.length}!`;
+   scoreText.style.fontSize = "18px";
+   scoreText.style.textAlign = "center";
+    scoreText.style.color = " #9aeabc";
+   questionElement.appendChild(resultTitle);
+   questionElement.appendChild(scoreText);
+
+//    nextButton.innerHTML = "Play Again";
+//    nextButton.style.display = "none";  // Show play again button
 }
+
 
 
 

@@ -13,15 +13,33 @@
             <h2>TO DO LIST <img src="icons8-books-100.png" alt=""></h2>
             <div class="row">
                 <input type="text" id="input-box" placeholder="add your text">
-                <button onclick="addTask()">Add</button>
+                <button class="add" id="add-btn" onclick="addTask()" >Add</button>
+                 <button class="time" id="duration-btn">Duration</button>
+
             </div>
             <ul id="list-container">
                 <!-- <li class="checked">Task 1</li>
                 <li>Task 2</li>
                 <li>Task 3</li>
-                <li>Task 4</li> -->
+                <li>Task 4</li>
+                can add a task
+                can mark task as done
+                can delete a task 
+                when you refresh the browser it will still show the task you added
+                i have to see the tasks for me to style it, then comment out and apply what you want
+
+                createelemt,toggle,appendchild,removeyou can add imagg inside a tag like h2
+
+                 -->
             </ul>
+            <div id="duration-popup">
+        <label>Hours: <input class="timebox" type="number" id="hours" min="0"></label><br>
+        <label>Minutes: <input class="timebox" type="number" id="minutes" min="0" max="59"></label><br>
+        <label>Seconds: <input class="timebox" type="number" id="seconds" min="0" max="59"></label><br>
+        <button id="submit-duration">Set </button>
         </div>
+        </div>
+
     </div>
 
 

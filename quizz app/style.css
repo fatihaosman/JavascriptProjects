@@ -19,15 +19,18 @@ body{
     font-size: 24px;
     font-weight: 600;
     color:#001e4d;
-    padding-bottom:30px;
+    padding-bottom:20px;
+    text-align: center;
+     text-decoration: underline;
 }
-.quizz{
-padding: 20px 0;
+.quiz{
+display: none;
 }
-.quizz h2{
+.quiz h2{
     font-size: 18px;
     color: #001e4d;
     font-weight:600 ;
+   
 }
 .btn{
     background-color: whitesmoke;
@@ -41,11 +44,11 @@ padding: 20px 0;
     border-radius: 4px;
     cursor: pointer;
 }
-.btn:hover:not([disabled]){ /*sixth*/
+.btn:hover:not([disabled]){ /*sixth hover effect will work when the button is not disabled*/
     background: #222;
     color: whitesmoke;
 }
-.btn:disabled{
+.btn:disabled /*when the buton is disabled the hover is dropped*/{
     cursor:no-drop ;
 }
 #next-btn{
@@ -67,4 +70,30 @@ padding: 20px 0;
 }
 .incorrect{
 background: #ff9393;
+}
+
+.introBtn{
+    background-color: #9aeabc;
+    color: #001e4d;
+    width: 150px;
+    padding: 10px;
+    margin: 20px auto 0;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: bold;
+    display: block;
+}
+.intro p{
+    line-height: 2;
+    color: #222;
+    text-align: center;
+    font-weight: 500;
+}
+
+.resultTitle{
+    color: #222;
+}
+.scoreText{
+    color: #9aeabc;
 }
