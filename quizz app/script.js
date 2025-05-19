@@ -2,6 +2,13 @@ const quizDiv=document.getElementsByClassName('quiz')[0];
 const introDiv=document.getElementsByClassName('intro')[0];
 const startBtn=document.getElementsByClassName('introBtn')[0];
 
+function ShowContent(){
+  quizDiv.innerHTML= localStorage.getItem("content");
+}
+ShowContent();
+function updateStorage(){
+  localStorage.setItem("content", quizDiv.innerHTML);
+}
 /*
  getElementsByClassName() returns a collection, not a single element, so you need to access the first one using [0].
  */
