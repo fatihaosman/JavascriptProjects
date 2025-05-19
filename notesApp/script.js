@@ -8,6 +8,7 @@ function ShowNotes(){
   notesContainer.innerHTML= localStorage.getItem("notes");
 }
 ShowNotes();
+
 function updateStorage(){
   // Get the current content of the notes container
   // and save it to local storage
