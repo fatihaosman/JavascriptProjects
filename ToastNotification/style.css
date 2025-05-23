@@ -1,0 +1,106 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+body{
+  background: #f7edff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons{
+  margin: 50px;
+}
+.buttons button{
+  background: #333;
+  width: 120px;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.buttons button:hover{
+  background: #fff;
+  color: #333;
+}
+#toast-box{
+  position: absolute;
+ bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.toast{
+ background: #fff; 
+ width: 400px;
+  height: 80px;
+  margin: 15px 0;
+  font-weight: 500;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  transform: translateX(100%);
+  animation:moveleft 0.5s linear forwards;
+}
+@keyframes moveleft{
+100%{
+ transform: translateX(0);
+}
+}
+
+
+
+
+.toast i{
+  margin:0 20px;
+  font-size: 35px;
+  color:green
+}
+.toast.invalid i{
+  color: orange
+}
+.toast.error i{
+  color:red
+}
+/* putting a line below the toaast div */
+.toast::after{
+  content:'' ;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  width: 100%;
+  height:5px;
+  background: green;
+  animation: anim 5s linear forwards
+}
+/* width is 100% and  in 5sec it will become 0*/
+@keyframes anim{
+  100%{
+    width: 0;
+  }
+}
+.toast.error::after{
+  background: red
+}
+.toast.invalid:after{
+    background: orange
+}
+
+
+
+
+/* 
+  
+   */
