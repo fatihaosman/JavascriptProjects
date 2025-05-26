@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>music player</title>
+  <script src="https://kit.fontawesome.com/22dd651f2f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!--you can hit play
+  you can pause
+  you can start song from anywhere
+  -->
+
+  <div class="container">
+    <div class="music-player">
+      <nav>
+        <div class="circle-icon">
+          <i class="fa-solid fa-angle-down"></i>
+             <!-- <i class="fa-solid fa-angles-down"></i> -->
+        </div>
+         <div class="circle">
+         <p class="header">PLAYING FROM PODCAST</p>
+         <p>true Crime with Kendall Rae</p>
+        </div>
+        <div class="circle-icon">
+         <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <img src="kendall-pic.jpeg" alt="" class="music-image">
+      <h1>Who killed Emily Pike? No more stolen sisters
+       <i class="fa-solid fa-circle-plus"></i>
+      </h1>
+      <p class="desc">True Crime with Kendall Rae</p>
+
+
+      <audio controls>
+        <source src="trueCrime.mp3" type="audio/mpeg">
+      </audio>
+      <input type="range" value="0" id="progress">
+
+
+      <div class="controls">
+         <div> <i class="fa-solid fa-rotate-left"></i></div>
+         <div> <i class="fa-solid fa-play"></i></div>
+          <div>   <i class="fa-solid fa-arrow-rotate-right"></i></div>
+      </div>
+
+
+    </div>
+  </div>
+</body>
+</html>
