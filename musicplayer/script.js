@@ -123,20 +123,14 @@ function skipBackward() {
 }
 
 
+//What I learned:
+
+//  ✔️ How to control HTML5 audio playback with JavaScript
+
+//  ✔️ How to sync UI elements (icons and progress bar) with audio states
+
+//  ✔️ How to use setInterval effectively for smooth feedback
+
+//  ✔️ How to build responsive user feedback into a media interface
 
 
-
-// This is a simple music player using HTML, CSS, and JavaScript
-// It allows you to play, pause, and seek through a song.
-// The player has a progress bar that shows the current time of the song
-// The player also has skip forward and skip backward buttons
-// The player uses the HTML5 audio element to play the song
-
-
-
-
-
-// play and pause buttons
-// the  progress is shown after every miliseconds
-// then we ca click on the progress bar too move the song to that point
-//when you refresh the page the song is paused and the icon is play
