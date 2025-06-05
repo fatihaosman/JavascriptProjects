@@ -13,7 +13,7 @@ const weatherIcon = document.querySelector(".weather_icon")
 async function checkWeather(city){
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
 
-    // “Please give me weather data for this city, and here’s my API key to prove I’m allowed.”, await is forwaiting for the data wich may take  while to retreive from the internet
+    // “Please give me weather data for this city, and here’s my API key to prove I’m allowed.”, await is for waiting for the data which may take  while to retreive from the internet
 //we have to check the response code is it error or a valid one
     if(response.status==404){
         document.querySelector(".error").style.display = "block";

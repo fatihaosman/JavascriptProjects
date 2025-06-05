@@ -13,7 +13,7 @@ function updateStorage(){
  getElementsByClassName() returns a collection, not a single element, so you need to access the first one using [0].
  */
 startBtn.addEventListener('click', function(){
-    introDiv.style.display="none";
+    introDiv.style.display="none";s
     quizDiv.style.display="block";
 });
 
