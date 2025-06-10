@@ -12,13 +12,14 @@
   background: #f3fbff;
 }
 .img-box{
-  position: relative;
  width: 60%;
  margin: auto;
+ line-height: 0; /*helps to center the image*/
  background-image: url(images/background.png);
  overflow: hidden;
+ position: relative;
 }
-/*puttoing one image on top of another*/
+/*putting one image on top of another*/
 .img-wrap{
   width: 20px;
   position: absolute;
@@ -41,5 +42,4 @@ span{
   top:50%;
   margin-left: -20px;
   margin-top: -20px;
- cursor: pointer;
 }
