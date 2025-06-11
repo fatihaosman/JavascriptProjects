@@ -4,18 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/22dd651f2f.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <form action="">
-    <div class="container">
-      <input type="name">
-      <input type="email">
-      <input type="phone number">
-      <input type="password">
-      <input type="confirm password">
-    </div>
-    <div class="image"></div>
-    <div class="image2"></div>
-  </form>
+  <div class="container">
+    <form action="">
+      <i class="fa-solid fa-paper-plane"></i>
+      <div class="input-group">
+        <label for="">  Full Name:</label>
+        <input type="text" placeholder="Enter your full name">
+      </div>
+      <div class="input-group">
+        <label for="">Phone No:</label>
+        <input type="tel" placeholder="+254718154635">
+      </div>
+      <div class="input-group">
+        <label for=""> Email Id:</label>
+        <input type="email" placeholder="Enter Email">
+      </div>
+      <div class="input-group">
+        <label for="">  Your message:</label>
+        <textarea rows="5" placeholder="Enter yourr message"></textarea>
+      </div>
+
+      <button >Submit</button>
+    </form>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+<!--
+if you do not input anything  and submit then you get errors , also per input you will get errors.
+if you put  half name, you get errors
+phone number should be 10 digits errors
+password should be atleast 8 characters error
+-->
