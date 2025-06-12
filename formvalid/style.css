@@ -17,8 +17,8 @@ body{
 .container{
   background: whitesmoke;
   width: 400px;
-  height: 350px;
-padding-top: 2%;
+  height: 400px;
+padding-top: 3%;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.447);
  position: relative;
@@ -31,12 +31,12 @@ form .input-group{
 }
 
 .input-group input{
-  padding: 10px;
+  padding: 15px;
   outline: 0;
   border: none;
   border-bottom:1px solid #777;
   background: transparent;
-  width: 220px;
+  width: 250px;
   margin-left: 90px;
 }
 .input-group textarea{
@@ -48,7 +48,7 @@ form .input-group{
    outline: none;
     height: 40px;  /* adjust to your preference */
   resize: vertical; /* lets user drag it taller if needed */
-    width: 220px;
+    width: 250px;
     margin-left: 100px;
 }
 .input-group label{
@@ -68,8 +68,9 @@ border-radius:4px ;
 font-weight: bold;
 cursor: pointer;
 box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.511);
+margin-top: 2px;
 }
-form .fa-solid{
+form .fa-paper-plane{
   color: aliceblue;
   background-color: #6acf6c;
   padding:25px;
@@ -81,6 +82,28 @@ font-size: 28px;
     transform: translate(-50%,-50%);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
+
+
+.input-group span{
+  position:absolute;
+  bottom: -18px;
+  right:27px;
+  font-size:12px;
+  color: red;
+}
+#submit-error{
+   color: red;
+    font-size:12px;
+    margin-top: 10px;
+}
+.input-group span i{
+  color: seagreen;
+}
+#exception{
+bottom: 1900px;
+
+}
+
 
 
 
