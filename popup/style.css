@@ -28,9 +28,10 @@ box-sizing: border-box;
   background: #fff;
   border-radius: 6px;
   position: absolute;
-  top:0;
+  /*trying to center the popup message */
+  top:0;  /*pushed the poup message up at the top of the site,   first itt was 50% , like we had centerd it*/
   left: 50%;
-  transform: translate(-50%,-50%) scale(0.1);
+  transform: translate(-50%,-50%) scale(0.1); /*then made it small using the sacle property*/
   text-align: center;
   padding: 0 30px 30px;
   color: #333;
@@ -44,8 +45,8 @@ box-sizing: border-box;
    transform: translate(-50%,-50%) scale(1);
 }
 .popup img{
- width: 100px;
- margin-top: -50px;
+ width: 100px; /*trying to reduce  the size of width*/
+ margin-top: -50px;    /*trying to pushup the img*/
  border-radius: 100%;
  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
