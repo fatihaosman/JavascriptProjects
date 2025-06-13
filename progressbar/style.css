@@ -17,6 +17,9 @@ body{
   height:160px;
   /* background: cornflowerblue; */
   position: relative;
+  display: flex;
+  flex-direction: column;
+ 
 }
 .outer{
   height: 160px;
@@ -66,4 +69,34 @@ svg{
   100%{
     stroke-dashoffset:165;
   }
+}
+
+
+
+.container{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+ h1{
+  font-weight: 500;
+  font-size: 55px;
+  text-align:center ;
+  margin-bottom: 60px;
+  text-decoration: underline;
+  color: #400453
+}
+button{
+  padding: 10px 36px;
+  border-radius: 6px;
+  border: none;
+  background: #680a85;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 40px;
+  box-shadow: 0px 6px 5px -3px rgba(0, 0, 0, 0.642);
+              
 }
